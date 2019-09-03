@@ -23,20 +23,17 @@ class Home extends Component {
                 user: {
                     id: 3,
                     name: this.props.username,
-                    avatarUrl: "https://randomuser.me/api/portraits/men/88.jpg"
+                    avatarUrl: "https://media.licdn.com/dms/image/C4D03AQHzcj-JGhGR7g/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=Mqerd6CaMHrXDb6D5M3I8BLVwKUz7pznBZ7PGJopmrA"
                 },
                 text,
                 timestamp: new Date().getTime()
             })
             this.setState({ text: "" })
             setTimeout(() => this.myFlatListRef.scrollToEnd({ animated: true }), 200)
-        } else {
-            // TODO MESSAGE GİRİN
-        }
+        } 
     };
 
     renderTheItemReceivedMessage = ({ item }) => {
-        //PureComponent
         if (item.user.id != 3) {
             return (
                 <View style={{ flexDirection: 'row', filex: '1' }}>
